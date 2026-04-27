@@ -416,6 +416,11 @@ body.dark-theme .navbar {
     gap: 1rem;
 }
 
+.panel-card,
+.stat-card {
+    color: var(--ink);
+}
+
 .hero-photo {
     width: 100%;
     max-width: 360px;
@@ -439,6 +444,10 @@ body.dark-theme .navbar {
 .detail-list li {
     position: relative;
     padding-left: 1.1rem;
+}
+
+.panel-card .focus-list li {
+    color: var(--ink-muted);
 }
 
 .focus-list li::before,
