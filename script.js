@@ -11,13 +11,10 @@
     }
 
     const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
+    if (savedTheme === "light") {
+        body.classList.remove("dark-theme");
+    } else {
         body.classList.add("dark-theme");
-    } else if (!savedTheme) {
-        const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        if (prefersDark) {
-            body.classList.add("dark-theme");
-        }
     }
 
     updateToggleAppearance();
