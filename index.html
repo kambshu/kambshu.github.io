@@ -3,373 +3,640 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Document title updated to reflect Shubham's name -->
-    <title>Shubham Kamble – Portfolio</title>
-    <!-- Import Google Fonts for a clean, modern look -->
+    <title>Shubham Kamble | Robotics Controls Engineer</title>
+    <meta
+        name="description"
+        content="Portfolio of Shubham Kamble, a robotics controls engineer focused on system identification, robot dynamics, state estimation, planning, and trajectory optimization."
+    >
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- Font‑Awesome for icons -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-QN9wok/h0BG/0ScQyZB4mRk2EDR+9WzztlJoekRCXt+5r/R9YCedFK5G695Y2Rhtg1FzUZwZkqJP7+pqsXGZSw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        rel="stylesheet"
+    >
+    <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        rel="stylesheet"
+        integrity="sha512-QN9wok/h0BG/0ScQyZB4mRk2EDR+9WzztlJoekRCXt+5r/R9YCedFK5G695Y2Rhtg1FzUZwZkqJP7+pqsXGZSw=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Hero / Landing section -->
-    <!-- Inline background-image attribute ensures the hero image loads correctly when viewed via the file protocol. -->
-    <header id="hero" style="background-image: url('img/hero.png')">
+    <header id="hero">
         <nav class="navbar">
-            <!-- <div class="logo">Shubham Kamble</div> -->
-            <ul class="nav-links">
+            <a class="logo" href="#hero">Shubham Kamble</a>
+            <ul class="nav-links" data-open="false">
                 <li><a href="#about">About</a></li>
                 <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
+                <li><a href="#work">Research</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#blog">Blogs</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button id="theme-toggle" aria-label="Switch color theme" title="Switch between light and dark theme">
-                <i class="fas fa-moon" aria-hidden="true"></i>
-                <span class="theme-toggle-label">Dark mode</span>
-            </button>
+            <div class="nav-actions">
+                <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <button id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch to dark mode">
+                    <i class="fas fa-moon" aria-hidden="true"></i>
+                    <span class="theme-toggle-label">Dark mode</span>
+                </button>
+            </div>
         </nav>
-        <div class="hero-content">
-            <!-- Introduce yourself with your real name and a succinct tagline -->
-            <h1>Hello, I'm <span class="highlight">Shubham Kamble</span></h1>
-            <p class="tagline">Robotics Controls Engineer bridging research and deployment</p>
-            <a href="#projects" class="btn">View My Work</a>
+
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <p class="eyebrow">Robotics Controls Engineer</p>
+                <h1>Building controls-first robotics systems.</h1>
+                <p class="lede">
+                    I work across system identification, robot dynamics, state estimation, planning,
+                    trajectory optimization, and learning-aware robotics software for collaborative and
+                    humanoid platforms.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="button">View Projects</a>
+                    <a href="#contact" class="button button-secondary">Get In Touch</a>
+                </div>
+                <div class="hero-links">
+                    <a href="mailto:shubhamkamblerwth@gmail.com">shubhamkamblerwth@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/shubham-kamble007/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    <a href="https://github.com/Shubham1965" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+            </div>
+
+            <aside class="hero-panel">
+                <img class="hero-photo" src="img/pp3.jpg" alt="Portrait of Shubham Kamble">
+                <div class="panel-card">
+                    <p class="card-kicker">Current Focus</p>
+                    <ul class="focus-list">
+                        <li>Model-based control for fixed-base and floating-base robots</li>
+                        <li>System identification, planning, and trajectory optimization</li>
+                        <li>Hybrid workflows connecting simulation, learning, and deployment</li>
+                    </ul>
+                </div>
+                <div class="stat-grid">
+                    <div class="stat-card">
+                        <strong>4+</strong>
+                        <span>years in research and industry</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>C++</strong>
+                        <span>and Python as primary tools</span>
+                    </div>
+                    <div class="stat-card">
+                        <strong>RWTH</strong>
+                        <span>M.Sc. in Robotic Systems Engineering</span>
+                    </div>
+                </div>
+            </aside>
         </div>
     </header>
 
-    <!-- About section -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <!-- Keep the placeholder portrait; feel free to replace with a real photo later -->
-                    <img src="img/pp3.jpg" alt="Portrait of Shubham Kamble">
-                </div>
-                <div class="about-text">
+    <main>
+        <section id="about" class="section">
+            <div class="container">
+                <p class="section-label">About</p>
+                <div class="section-heading">
+                    <h2>Research-to-deployment robotics engineering.</h2>
                     <p>
-                        I am a <strong>Robotics Controls Engineer</strong> with over four years of academic research,
-                        teaching and professional experience in real‑time robotics software, optimisation and
-                        machine learning. My work focuses on transitioning advanced algorithms from simulation to
-                        physical deployment, building ML/RL pipelines and developing control frameworks for complex
-                        multi‑body robots. With strong mathematical foundations in system identification, optimal
-                        control and reinforcement learning, I strive to bridge the gap between theoretical
-                        research and real‑world robotics applications.
+                        I build real-time robotics software and control algorithms with a bias toward methods
+                        that remain interpretable, benchmarkable, and deployable.
                     </p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience section -->
-    <section id="experience" class="section light-bg">
-        <div class="container">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <!-- Neura Robotics -->
-                <div class="timeline-item">
-                    <span class="timeline-date">Sept 2024 – Present</span>
-                    <div class="timeline-content">
-                        <h3>Robotics Controls Engineer</h3>
-                        <h4>Neura Robotics GmbH, Metzingen, Germany</h4>
-                        <p>Designed and implemented a dynamic identification framework for torque constants, rotor inertia, friction and inertial parameters. 
-                            Developed Fourier‑series‑based trajectory generation under Riemannian manifold constraints. 
-                            Created analytical inverse and forward kinematics solvers for a closed chain model for the humanoid. 
-                            Contributed towards the developement of a generalized inverse kinematics and inverse dynamics solvers for realtime applications. </p>
-                    </div>
-                </div>
-                <!-- WZL Research Assistant -->
-                <div class="timeline-item">
-                    <span class="timeline-date">Nov 2021 – Aug 2024</span>
-                    <div class="timeline-content">
-                        <h3>Student Research Assistant</h3>
-                        <h4>Laboratory for Machine Tools and Production Engineering (WZL), RWTH Aachen</h4>
-                        <p>Built ML pipelines (RNEA+FCNN, LNN) for structured learning of 6‑DOF industrial robot dynamics. 
-                            Integrated a Doosan Cobot M1013 with hardware peripherals on ROS for reinforcement‑learning‑based assembly automation. 
-                            Developed a SIMULINK inverse dynamics model for friction identification. 
-                            Designed a novel inertial parameter identification routine using low‑velocity excitation trajectories. 
-                            Created explainable AI models using Transformers and Captum for torque prediction interpretability. 
-                            Deployed research notebooks on RWTH JupyterHub with Docker.</p>
-                    </div>
-                </div>
-                <!-- Student Assistant at IC Chair -->
-                <div class="timeline-item">
-                    <span class="timeline-date">Oct 2022 – Mar 2024</span>
-                    <div class="timeline-content">
-                        <h3>Student Assistant – Optimal Control &amp; Technical Informatics Lab</h3>
-                        <h4>Chair of Intelligent Control Systems, RWTH Aachen</h4>
-                        <p>Guided students in implementing control algorithms (PI, PID, MPC) on FloatShield apparatus using Arduino; 
-                            Prepared lecture notes on the Pontryagin Maximum Principle. 
-                            Graded and evaluated coursework for over 50 students.
-                            Supported laboratory sessions on Kalman Filters, Model Predictive Control and Receding Horizon Control.</p>
-                    </div>
-                </div>
-                <!-- Carnot Technologies -->
-                <div class="timeline-item">
-                    <span class="timeline-date">Aug 2018 – Aug 2019</span>
-                    <div class="timeline-content">
-                        <h3>Product R&amp;D Engineer (Mechatronic Systems)</h3>
-                        <h4>Carnot Technologies, Mumbai, India</h4>
-                        <p>Conceptualised and prototyped automation systems. 
-                            Developed functional prototypes aligned with ISO/IEC standards. 
-                            Generated Bills of Materials to streamline sourcing.</p> 
-                    </div>
+                <div class="about-grid">
+                    <article class="surface-card">
+                        <h3>Professional Summary</h3>
+                        <p>
+                            Robotics Controls Engineer with 4+ years of research and industry experience
+                            developing real-time robotics software and control algorithms for collaborative and
+                            humanoid robots. My work spans numerical optimization, task-space control, system
+                            identification, state estimation, trajectory optimization, and motion planning.
+                        </p>
+                        <p>
+                            I also bring working exposure to optimal control, reinforcement learning, classical
+                            machine learning, and generative AI research, with a strong preference for turning
+                            theory into reusable software and moving algorithms from simulation toward physical
+                            systems.
+                        </p>
+                    </article>
+                    <aside class="surface-card">
+                        <h3>Core Stack</h3>
+                        <div class="tag-group">
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">TypeScript</span>
+                            <span class="tag">Pinocchio</span>
+                            <span class="tag">MuJoCo</span>
+                            <span class="tag">Isaac Sim</span>
+                            <span class="tag">Newton</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">JAX</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Three.js</span>
+                        </div>
+                        <p class="card-note">
+                            Comfortable from mathematical formulation through implementation, debugging,
+                            benchmarking, and technical communication.
+                        </p>
+                    </aside>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Education section -->
-    <section id="education" class="section light-bg">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="timeline">
-                
-                <!-- M.Sc. Education -->
-                <div class="timeline-item">
-                    <span class="timeline-date">Oct 2020 – May 2024</span>
-                    <div class="timeline-content">
-                        <h3>M.Sc. in Robotic Systems Engineering</h3>
-                        <h4>RWTH Aachen University, Germany</h4>
-                        <p>Optimal Control, Reinforcement Learning, Numerical Optimisation, Self‑driving Vehicles, Machine Learning, Computer Vision and Advanced robot Kinematics/Dynamics.</p>
-                    </div>
+        <section id="experience" class="section section-alt">
+            <div class="container">
+                <p class="section-label">Experience</p>
+                <div class="section-heading">
+                    <h2>From mechatronic prototyping to modern robotics control stacks.</h2>
+                    <p>
+                        My recent work combines model-based methods, simulation platforms, and software
+                        infrastructure for high-performance robotics.
+                    </p>
                 </div>
-                <!-- B.Tech Education -->
-                <div class="timeline-item">
-                    <span class="timeline-date">Aug 2014 – May 2018</span>
-                    <div class="timeline-content">
-                        <h3>B.Tech. in Mechanical Engineering</h3>
-                        <h4>Veermata Jijabai Technological Institute (VJTI), Mumbai, India</h4>
-                        <p>Mechatronics, Automotive Engineering, Electrical Drives, Computational Fluid Dynamics and Finite Element Methods.</p>
-                    </div>
+                <div class="timeline">
+                    <article class="timeline-item">
+                        <p class="timeline-date">Sept 2024 - Present</p>
+                        <div class="timeline-content">
+                            <h3>Robotics Controls Engineer</h3>
+                            <h4>Neura Robotics GmbH, Metzingen, Germany</h4>
+                            <ul class="detail-list">
+                                <li>Contributing to system identification, robot kinematics and dynamics, planning, controls, and trajectory optimization for fixed-base and floating-base robots.</li>
+                                <li>Building exposure across Newton, MuJoCo, Isaac Sim, and adjacent simulation stacks for locomotion and manipulation workflows.</li>
+                                <li>Working around the stack needed for whole-body planning, controllers, state estimation, and tracking for complex robot systems.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <p class="timeline-date">Nov 2021 - Aug 2024</p>
+                        <div class="timeline-content">
+                            <h3>Student Research Assistant</h3>
+                            <h4>WZL, RWTH Aachen, Germany</h4>
+                            <ul class="detail-list">
+                                <li>Built expertise in inertial-parameter and friction-model identification for industrial robot dynamics.</li>
+                                <li>Worked on structured learning pipelines that combine model-based methods with machine learning for torque prediction.</li>
+                                <li>Supported interpretable ML workflows and deployed research notebooks with Docker and RWTH JupyterHub infrastructure.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <p class="timeline-date">Oct 2022 - Mar 2024</p>
+                        <div class="timeline-content">
+                            <h3>Student Assistant, Optimal Control and Informatics</h3>
+                            <h4>Chair of Intelligent Control Systems, RWTH Aachen, Germany</h4>
+                            <ul class="detail-list">
+                                <li>Guided students implementing PI, PID, and MPC controllers on the FloatShield apparatus using Arduino.</li>
+                                <li>Prepared lecture notes on the Pontryagin Maximum Principle and graded coursework for more than 50 students.</li>
+                                <li>Supported laboratory sessions on Kalman filters, Model Predictive Control, and Receding Horizon Control.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="timeline-item">
+                        <p class="timeline-date">Aug 2018 - Aug 2019</p>
+                        <div class="timeline-content">
+                            <h3>Product R&amp;D Engineer, Mechatronic Systems</h3>
+                            <h4>Carnot Technologies, Mumbai, India</h4>
+                            <ul class="detail-list">
+                                <li>Conceptualized and prototyped automation systems for product development workflows.</li>
+                                <li>Developed functional prototypes aligned with ISO and IEC standards and generated bills of materials for sourcing.</li>
+                            </ul>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills section -->
-    <section id="skills" class="section light-bg">
-        <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <!-- Programming languages -->
-                <div class="skill-card">
-                    <i class="fas fa-code fa-2x"></i>
-                    <h3>C++ & Python</h3>
-                    <p>High‑performance robotics, control algorithms and reinforcement learning development.</p>
+        <section id="skills" class="section">
+            <div class="container">
+                <p class="section-label">Skills</p>
+                <div class="section-heading">
+                    <h2>A controls-heavy profile with ML and full-stack tooling when needed.</h2>
+                    <p>
+                        My strongest work sits at the boundary between mathematical modeling, practical software,
+                        and robotics deployment constraints.
+                    </p>
                 </div>
-                <!-- Control & optimisation -->
-                <div class="skill-card">
-                    <i class="fas fa-cogs fa-2x"></i>
-                    <h3>Control &amp; Optimisation</h3>
-                    <p>Advanced robot Kinematics &amp; Dynamics, Optimal Control, and Trajectory Optimisation techniques.</p>
-                </div>
-                <!-- Estimation & optimisation -->
-                <div class="skill-card">
-                    <i class="fas fa-cogs fa-2x"></i>
-                    <h3>State Estimation &amp; Bayesian Optimisation</h3>
-                    <p>Advanced state estimation (Kalman, Extended-Kalman, Unscented Kalman, and advanced Particle filtering), and Bayesian Optimisation techniques.</p>
-                </div>
-                <!-- Machine learning & RL -->
-                <div class="skill-card">
-                    <i class="fas fa-brain fa-2x"></i>
-                    <h3>Machine Learning &amp; Reinforcement LearningL</h3>
-                    <p>Building ML pipelines and applying reinforcement learning to robotics.</p>
-                </div>
-                <!-- Frameworks & tools -->
-                <div class="skill-card">
-                    <i class="fas fa-toolbox fa-2x"></i>
-                    <h3>Frameworks &amp; Tools</h3>
-                    <p>Linux, Docker, Git, Gitlab, ROS2, JAX, PyTorch, MATLAB, SIMULINK.</p>
-                </div>
-                <!-- System identification -->
-                <div class="skill-card">
-                    <i class="fas fa-chart-line fa-2x"></i>
-                    <h3>System Identification</h3>
-                    <p>Inertial parameters, rotor inertia, friction parameters, and elastic model estimation.</p>
-                </div>
-                <!-- Soft skills -->
-                <div class="skill-card">
-                    <i class="fas fa-user-friends fa-2x"></i>
-                    <h3>Soft Skills</h3>
-                    <p>Independent learner, critical thinker, problem solver and good communicator.</p>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <p class="card-kicker">Languages</p>
+                        <h3>C++, Python, TypeScript</h3>
+                        <p>Primary implementation languages for robotics libraries, experimentation, developer tooling, and browser-based interfaces.</p>
+                    </article>
+                    <article class="skill-card">
+                        <p class="card-kicker">Robotics and Optimization</p>
+                        <h3>Dynamics, control, planning</h3>
+                        <p>System identification, state estimation, realtime model-based controller design, trajectory optimization, and motion planning.</p>
+                    </article>
+                    <article class="skill-card">
+                        <p class="card-kicker">ML and RL</p>
+                        <h3>Physics-aware learning</h3>
+                        <p>PyTorch, JAX, diffusion models, actor-critic reinforcement learning, and Lagrangian neural networks for robotics research.</p>
+                    </article>
+                    <article class="skill-card">
+                        <p class="card-kicker">Simulation and Modeling</p>
+                        <h3>Robot-centric simulation stack</h3>
+                        <p>Pinocchio, Newton, MuJoCo, Isaac Sim, Gymnasium, and URDF-based systems for modeling and evaluation.</p>
+                    </article>
+                    <article class="skill-card">
+                        <p class="card-kicker">Software and Tooling</p>
+                        <h3>Research-to-product workflow</h3>
+                        <p>Docker, Linux, Git, CMake, nanobind, FastAPI, React, and Three.js for reliable development and delivery.</p>
+                    </article>
+                    <article class="skill-card">
+                        <p class="card-kicker">Working Style</p>
+                        <h3>Independent and direct</h3>
+                        <p>Independent learner, critical thinker, problem-solver, and clear communicator with a strong bias toward ownership.</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <!-- Motion generation library -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="Motion Generation Library">
-                    <h3>Motion Generation Library</h3>
-                    <p>Reusable C++ and Python library for analytical trajectory generation with linear, parabolic, cubic, quintic, trapezoidal, jerk-limited double-S, and waypoint spline profiles for robotics and CNC applications.</p>
-                    <a href="https://github.com/Shubham1965/motion_generation" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+        <section id="work" class="section section-alt">
+            <div class="container">
+                <p class="section-label">Selected Work</p>
+                <div class="section-heading">
+                    <h2>Thesis and seminar work that shaped the current profile.</h2>
+                    <p>
+                        These projects capture the control, optimization, learning, and robotics themes that
+                        continue to define my day-to-day engineering work.
+                    </p>
                 </div>
-                <!-- Planning algorithms library -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="Planning Algorithms Library">
-                    <h3>Planning Algorithms Library</h3>
-                    <p>From-scratch C++ implementations of RRT, RRT*, RRT-Connect, PRM/PRM*, FMT*, BIT*, and RABIT* with a unified interface, obstacle handling, test coverage, documentation, and optional Python bindings.</p>
-                    <a href="https://github.com/Shubham1965/planning_algorithms" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- State estimation library -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="State Estimation Library">
-                    <h3>State Estimation Library</h3>
-                    <p>Compact, robotics-oriented C++ estimation framework implementing Bayes filter recursion, KF/EKF/UKF, particle filtering, and Gauss-Hermite Gaussian filtering with pluggable process and measurement models.</p>
-                    <a href="https://github.com/Shubham1965/state_estimation" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- Diffusion models platform -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="Diffusion Models Platform">
-                    <h3>Diffusion Models Platform</h3>
-                    <p>PyTorch DDPM research platform with configurable U-Net diffusion models, Gaussian diffusion utilities, AMP+EMA training pipeline, sampling scripts, and trajectory visualization for forward and reverse diffusion dynamics.</p>
-                    <a href="https://github.com/Shubham1965/diffusion_models" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- RL projects platform -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="RL Projects Platform">
-                    <h3>RL Projects Platform</h3>
-                    <p>Hands-on reinforcement learning implementation suite covering dynamic programming, Monte Carlo, temporal-difference learning, DQN/DDQN, policy gradients, actor-critic methods, and model-based planning.</p>
-                    <a href="https://github.com/Shubham1965/rl-projects" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- Lagrangian neural network platform -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="Lagrangian Neural Network Research Platform">
-                    <h3>Lagrangian Neural Network Platform</h3>
-                    <p>Research platform for LNN/DeLaN/FeLaN dynamics modeling with reproducible training workflows in PyTorch and JAX, including double-pendulum baselines and Pinocchio-based dataset generation.</p>
-                    <a href="https://github.com/Shubham1965/lagrangian-nn" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- Robot viewer -->
-                <div class="project-card">
-                    <img src="img/hero.png" alt="Robot Viewer">
-                    <h3>Robot Viewer</h3>
-                    <p>Full-stack robot model visualization tool with a FastAPI backend and React/TypeScript frontend for parsing and exploring URDF, MJCF, and USD robot descriptions directly in the browser.</p>
-                    <a href="https://github.com/Shubham1965/robot-viewer" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- Advanced IK project -->
-                <div class="project-card">
-                    <img src="img/advanced_inverse_kinematics.png" alt="Advanced Inverse Kinematics for 7DOF Robot">
-                    <h3>Advanced Inverse Kinematics</h3>
-                    <p>Implemented an iterative redundancy-resolving 7-DOF inverse kinematics solver using pseudo-inverse Jacobians, null-space projection, and secondary task optimization for robust motion execution.</p>
-                    <a href="https://github.com/Shubham1965/InverseKinematics7dof" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- Condition number optimisation project -->
-                <div class="project-card">
-                    <img src="img/base_parameters_axis_5.png" alt="Condition Number Optimization">
-                    <h3>Research Project Thesis: Condition Number Optimisation</h3>
-                    <p>Designed and optimized excitation trajectories to minimize regressor condition number, improving identifiability and numerical robustness in robot inertial parameter estimation.</p>
-                    <a href="https://github.com/Shubham1965/research-project" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- DDP Seminar -->
-                <div class="project-card">
-                    <img src="img/ddp_report.png" alt="Trajectory Optimisation">
-                    <h3>Seminar: Differential Dynamic Programming</h3>
-                    <p>Analyzed and presented the paper on online trajectory optimization for synthesizing and stabilizing complex behaviors using Differential Dynamic Programming.</p>
-                    <a href="https://github.com/Shubham1965/Advanced-methods-in-control-and-optimization-seminar" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- AlphaGo Seminar -->
-                <div class="project-card">
-                    <img src="img/alpha_go_offline_training.png" alt="Learning‑based Control">
-                    <h3>Seminar: Review on the AlphaGo RL algorithm</h3>
-                    <p>Studied and presented DeepMind's AlphaGo pipeline, focusing on policy/value networks, Monte Carlo Tree Search integration, and reinforcement learning strategy improvement.</p>
-                    <a href="https://github.com/Shubham1965/Learning_based_Control_Seminar" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
-                </div>
-                <!-- Ethics in AI and robotics Seminar -->
-                <div class="project-card">
-                    <img src="img/ethical_machines.png" alt="Ethics in AI and Robotics">
-                    <h3>Seminar: Ethics in AI and Robotics</h3>
-                    <p>Evaluated ethical implications of AI-driven robotics systems, including responsibility, safety, transparency, and human impact in autonomous and learning-enabled control.</p>
-                    <a href="https://github.com/Shubham1965/Ethics_of_Artificial_Intelligence_and_Robotics_Seminar_2021_SoSe-" class="project-link" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                <div class="work-grid">
+                    <article class="work-card">
+                        <p class="card-kicker">Thesis</p>
+                        <h3>Regularization in Differential Dynamic Programming</h3>
+                        <span class="work-date">May 2023 - Jan 2024</span>
+                        <p>
+                            Developed improved regularization methods for DDP, benchmarked them on pendubot,
+                            acrobot, and cartpole systems, and extended the analysis to autonomous-driving
+                            trajectory planning.
+                        </p>
+                        <span class="inline-note">Implementation lives inside a dedicated trajectory optimization library.</span>
+                    </article>
+
+                    <article class="work-card">
+                        <p class="card-kicker">Research Project</p>
+                        <h3>Condition Number Optimization</h3>
+                        <span class="work-date">Mar 2022 - Mar 2023</span>
+                        <p>
+                            Optimized excitation trajectories to reduce regressor condition number and improve
+                            inertial parameter identifiability in robot system identification.
+                        </p>
+                        <a class="inline-link" href="https://github.com/Shubham1965/research-project" target="_blank" rel="noopener noreferrer">View project</a>
+                    </article>
+
+                    <article class="work-card">
+                        <p class="card-kicker">Seminar</p>
+                        <h3>Advanced Methods in Control and Optimization</h3>
+                        <span class="work-date">Apr 2022 - Jul 2022</span>
+                        <p>
+                            Reviewed online trajectory optimization for complex behaviors and wrote a concise
+                            report on DDP, with emphasis on regularization and line-search behavior.
+                        </p>
+                        <a class="inline-link" href="https://github.com/Shubham1965/Advanced-methods-in-control-and-optimization-seminar" target="_blank" rel="noopener noreferrer">View seminar repo</a>
+                    </article>
+
+                    <article class="work-card">
+                        <p class="card-kicker">Seminar</p>
+                        <h3>Learning-based Control</h3>
+                        <span class="work-date">Oct 2021 - Feb 2022</span>
+                        <p>
+                            Analyzed AlphaGo, Monte Carlo Tree Search, and deep reinforcement learning, then
+                            summarized the architecture and training logic in a written review.
+                        </p>
+                        <a class="inline-link" href="https://github.com/Shubham1965/Learning_based_Control_Seminar" target="_blank" rel="noopener noreferrer">View seminar repo</a>
+                    </article>
+
+                    <article class="work-card">
+                        <p class="card-kicker">Seminar</p>
+                        <h3>Ethics in AI and Robotics</h3>
+                        <span class="work-date">Apr 2021 - Sept 2021</span>
+                        <p>
+                            Evaluated safety, accountability, transparency, and human impact in AI-driven
+                            robotics systems and published the seminar work at Machine Ethics.
+                        </p>
+                        <a class="inline-link" href="https://github.com/Shubham1965/Ethics_of_Artificial_Intelligence_and_Robotics_Seminar_2021_SoSe-" target="_blank" rel="noopener noreferrer">View seminar repo</a>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Achievements section -->
-    <!-- <section id="achievements" class="section light-bg">
-        <div class="container">
-            <h2>Achievements</h2>
-            <div class="achievements-grid"> -->
-                <!-- Dynamic identification -->
-                <!-- <div class="achievement-card">
-                    <i class="fas fa-bolt fa-2x"></i>
-                    <h3>Dynamic Identification Framework</h3>
-                    <p>Developed a comprehensive framework to estimate torque constants, rotor inertia, friction and inertial parameters of humanoid robots.</p>
-                </div> -->
-                <!-- Trajectory optimisation -->
-                <!-- <div class="achievement-card">
-                    <i class="fas fa-wave-square fa-2x"></i>
-                    <h3>Fourier‑Series Trajectory Generation</h3>
-                    <p>Implemented trajectory optimisation using Fourier‑series‑based generation under Riemannian manifold constraints.</p>
-                </div> -->
-                <!-- Kinematic solvers -->
-                <!-- <div class="achievement-card">
-                    <i class="fas fa-shapes fa-2x"></i>
-                    <h3>Analytical IK & FK Solver (Closed-chain ankle model)</h3>
-                    <p>Derived analytical closed‑chain inverse and forward kinematics solvers enabling multi‑objective optimisation for humanoid robots.</p>
-                </div> -->
-                <!-- ML pipelines -->
-                <!-- <div class="achievement-card">
-                    <i class="fas fa-network-wired fa-2x"></i>
-                    <h3>Structured ML Pipelines</h3>
-                    <p>Built ML pipelines combining rigid‑body dynamics (RNEA) with fully connected neural networks and Lagrangian Neural Networks for learning robot dynamics.</p>
-                </div> -->
-                <!-- Explainable AI -->
-                <!-- <div class="achievement-card">
-                    <i class="fas fa-eye fa-2x"></i>
-                    <h3>Explainable AI Models</h3>
-                    <p>Created interpretable torque prediction models using Transformers and Captum to visualise the contribution of each input.</p>
-                </div> -->
-                <!-- Academic & professional development -->
-                <!-- <div class="achievement-card">
-                    <i class="fas fa-certificate fa-2x"></i>
-                    <h3>Courses & Certifications</h3>
-                    <p>Continuously upskilling via ongoing courses like “C++ for Programmers” and “AI in Robotics”, and completed certifications including MIT OCW Linear Algebra and a Python bootcamp.</p>
-                </div> -->
-            <!-- </div>
-        </div>
-    </section> -->
+        <section id="projects" class="section">
+            <div class="container">
+                <p class="section-label">Projects</p>
+                <div class="section-heading">
+                    <h2>Reusable libraries and research platforms.</h2>
+                    <p>
+                        Most of my side projects are shaped as compact libraries or focused tooling platforms
+                        rather than one-off experiments.
+                    </p>
+                </div>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Optimal Control</p>
+                                <h3>Trajectory Optimization Library</h3>
+                            </div>
+                            <span class="project-status">On request</span>
+                        </div>
+                        <p>
+                            Compact C++ and Python framework for unconstrained optimal control with DDP, iLQR,
+                            and iLQG solvers for robotics problems.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">DDP</span>
+                            <span class="tag">iLQR</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-note">Private repository.</span>
+                        </div>
+                    </article>
 
-    <!-- Blog section -->
-    <section id="blog" class="section">
-        <div class="container">
-            <h2>Blogs</h2>
-            <div id="blog-posts" class="blog-grid" aria-live="polite"></div>
-        </div>
-    </section>
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Trajectory Generation</p>
+                                <h3>Motion Generation Library</h3>
+                            </div>
+                            <span class="project-status">On request</span>
+                        </div>
+                        <p>
+                            Reusable trajectory-generation library with linear, polynomial, trapezoidal,
+                            jerk-limited double-S, and waypoint spline profiles for robotics and CNC workflows.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Motion Profiles</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-note">Private repository.</span>
+                        </div>
+                    </article>
 
-    <!-- Contact section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2>Contact</h2>
-            <p>If you’d like to get in touch and seek my expertise, then feel free to get touch via the following platforms. 
-                I’m open to collaborations, mentorship and interesting projects.</p>
-            <div class="contact-details">
-                <!-- <p><i class="fas fa-envelope"></i> <a href="mailto:shubhamkamblerwth@gmail.com">shubhamkamblerwth@gmail.com</a></p> -->
-                <p><i class="fab fa-linkedin"></i> <a href="https://www.linkedin.com/in/shubham-kamble007/" target="_blank">LinkedIn</a></p>
-                <p><i class="fab fa-github"></i> <a href="https://github.com/Shubham1965" target="_blank">GitHub</a></p>
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Planning</p>
+                                <h3>Planning Algorithms Library</h3>
+                            </div>
+                            <span class="project-status">On request</span>
+                        </div>
+                        <p>
+                            Unified implementations of RRT, RRT*, RRT-Connect, PRM, PRM*, FMT*, BIT*, and
+                            RABIT* with obstacle handling, tests, and optional Python bindings.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">C++</span>
+                            <span class="tag">Python</span>
+                            <span class="tag">Motion Planning</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-note">Private repository.</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Estimation</p>
+                                <h3>State Estimation Library</h3>
+                            </div>
+                            <span class="project-status">On request</span>
+                        </div>
+                        <p>
+                            Robotics-oriented estimation framework covering Bayes filter recursion, Kalman
+                            variants, particle filtering, and Gauss-Hermite Gaussian filtering.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">C++</span>
+                            <span class="tag">Bayes Filters</span>
+                            <span class="tag">Kalman Methods</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-note">Private repository.</span>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Generative AI</p>
+                                <h3>Diffusion Models Platform</h3>
+                            </div>
+                            <span class="project-status">GitHub</span>
+                        </div>
+                        <p>
+                            PyTorch DDPM research platform with configurable U-Net diffusion models, Gaussian
+                            diffusion utilities, AMP plus EMA training, and sampling workflows.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">Python</span>
+                            <span class="tag">PyTorch</span>
+                            <span class="tag">DDPM</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="inline-link" href="https://github.com/Shubham1965/diffusion_models" target="_blank" rel="noopener noreferrer">View repository</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Reinforcement Learning</p>
+                                <h3>RL Projects Platform</h3>
+                            </div>
+                            <span class="project-status">GitHub</span>
+                        </div>
+                        <p>
+                            Single experimentation suite for dynamic programming, Monte Carlo methods,
+                            temporal-difference learning, DQN variants, policy gradients, actor-critic, and
+                            model-based reinforcement learning.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">Python</span>
+                            <span class="tag">RL</span>
+                            <span class="tag">Experimentation</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="inline-link" href="https://github.com/Shubham1965/rl-projects" target="_blank" rel="noopener noreferrer">View repository</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Learned Dynamics</p>
+                                <h3>Lagrangian Neural Network Platform</h3>
+                            </div>
+                            <span class="project-status">GitHub</span>
+                        </div>
+                        <p>
+                            Research platform for LNN, DeLaN, and FeLaN dynamics modeling with reproducible
+                            training workflows, double-pendulum baselines, and Pinocchio-based dataset
+                            generation.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">Python</span>
+                            <span class="tag">JAX</span>
+                            <span class="tag">PyTorch</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="inline-link" href="https://github.com/Shubham1965/lagrangian-nn" target="_blank" rel="noopener noreferrer">View repository</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Visualization</p>
+                                <h3>Robot Viewer</h3>
+                            </div>
+                            <span class="project-status">GitHub</span>
+                        </div>
+                        <p>
+                            Full-stack robot visualization tool with a FastAPI backend and React plus
+                            TypeScript frontend for URDF, MJCF, and USD inspection in the browser.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Three.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="inline-link" href="https://github.com/Shubham1965/robot-viewer" target="_blank" rel="noopener noreferrer">View repository</a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-header">
+                            <div>
+                                <p class="card-kicker">Kinematics</p>
+                                <h3>Inverse Kinematics for 7-DoF Robot</h3>
+                            </div>
+                            <span class="project-status">GitHub</span>
+                        </div>
+                        <p>
+                            Redundancy-resolving inverse kinematics solver with pseudo-inverse Jacobians,
+                            null-space projection, and secondary objectives for robust motion execution.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">C++</span>
+                            <span class="tag">Jacobian Methods</span>
+                            <span class="tag">IK</span>
+                        </div>
+                        <div class="project-links">
+                            <a class="inline-link" href="https://github.com/Shubham1965/InverseKinematics7dof" target="_blank" rel="noopener noreferrer">View repository</a>
+                        </div>
+                    </article>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="education" class="section section-alt">
+            <div class="container">
+                <p class="section-label">Education</p>
+                <div class="section-heading">
+                    <h2>Mechanical engineering foundation, then robotics and control specialization.</h2>
+                    <p>
+                        My academic path moved from classical engineering analysis into robotics, optimal
+                        control, reinforcement learning, and numerical optimization.
+                    </p>
+                </div>
+                <div class="education-grid">
+                    <article class="education-card">
+                        <p class="card-kicker">Graduate Study</p>
+                        <h3>RWTH Aachen University</h3>
+                        <p class="education-degree">M.Sc. in Robotic Systems Engineering</p>
+                        <p class="education-date">Oct 2020 - May 2024</p>
+                        <p>
+                            Coursework included advanced robot kinematics and dynamics, optimal control,
+                            reinforcement learning, numerical optimization, machine learning, computer vision,
+                            and self-driving vehicles.
+                        </p>
+                    </article>
+
+                    <article class="education-card">
+                        <p class="card-kicker">Undergraduate Study</p>
+                        <h3>Veermata Jijabai Technological Institute</h3>
+                        <p class="education-degree">B.Tech. in Mechanical Engineering</p>
+                        <p class="education-date">Aug 2014 - May 2018</p>
+                        <p>
+                            Built a base in mechatronics, automotive engineering, electrical drives,
+                            computational fluid dynamics, finite element methods, and broader engineering
+                            analysis.
+                        </p>
+                    </article>
+
+                    <!-- <article class="education-card">
+                        <p class="card-kicker">Current Direction</p>
+                        <h3>Where the profile fits best</h3>
+                        <p>
+                            Robotics roles that demand nonlinear optimization depth, strong robot modeling,
+                            planning, estimation, and a willingness to move between theory, software, and
+                            deployment details.
+                        </p>
+                        <div class="tag-group">
+                            <span class="tag">Whole-body control</span>
+                            <span class="tag">MPC and DDP</span>
+                            <span class="tag">State estimation</span>
+                            <span class="tag">Hybrid model-based learning</span>
+                        </div>
+                    </article> -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <p class="section-label">Contact</p>
+                <div class="section-heading">
+                    <h2>Open to any research-engineering conversations.</h2>
+                    <p>
+                        If you want to talk about research-engineering problems that intersect with mathematics and its applications whether it is controls, neuroscience, biology, etc., I would love to connect. I am also open to conversations about potential collaborations, or just sharing ideas in the robotics and controls space.
+                    </p>
+                </div>
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <h3>Email</h3>
+                        <p>Best for direct technical collaborations.</p>
+                        <a href="mailto:shubhamkamblerwth@gmail.com">shubhamkamblerwth@gmail.com</a>
+                    </article>
+
+                    <article class="contact-card">
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <h3>LinkedIn</h3>
+                        <p>Professional timeline, network, and public profile.</p>
+                        <a href="https://www.linkedin.com/in/shubham-kamble007/" target="_blank" rel="noopener noreferrer">linkedin.com/in/shubham-kamble007</a>
+                    </article>
+
+                    <article class="contact-card">
+                        <i class="fab fa-github" aria-hidden="true"></i>
+                        <h3>GitHub</h3>
+                        <p>Public repositories, code samples, and project history.</p>
+                        <a href="https://github.com/Shubham1965" target="_blank" rel="noopener noreferrer">github.com/Shubham1965</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <div class="container">
-            <!-- Footer automatically inserts current year via script -->
-            <p>&copy; <span id="current-year"></span> Shubham Kamble. All rights reserved.</p>
+        <div class="container footer-inner">
+            <p>&copy; <span id="current-year"></span> Shubham Kamble.</p>
+            <a href="#hero">Back to top</a>
         </div>
     </footer>
 
-    <script src="blog/posts.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
